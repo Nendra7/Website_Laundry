@@ -116,9 +116,9 @@ module.exports = {
             const existing = existingRows[0];
 
             // Set default values dari data existing
-            let finalPelangganId = pelangganId || existing.pelangganId;
-            let finalLayananId = layananId || existing.layananId;
-            let finalBeratCucian = Berat_Cucian || existing.Berat_Cucian;
+            let finalPelangganId = pelangganId ?? existing.pelangganId;
+            let finalLayananId = layananId ?? existing.layananId;
+            let finalBeratCucian = Berat_Cucian ?? existing.Berat_Cucian;
 
             // Ambil data pelanggan
             const [pelangganRows] = await pool.execute('SELECT * FROM pelanggan WHERE id = ?', [finalPelangganId]);
